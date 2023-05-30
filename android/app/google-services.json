@@ -1,0 +1,166 @@
+{
+  "project_info": {
+    "project_number": "132130718041",
+    "project_id": "fk-apps-2021",
+    "storage_bucket": "fk-apps-2021.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:132130718041:android:d75d7e3d2132588792cc48",
+        "android_client_info": {
+          "package_name": "com.forumkeadilan.newsapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "132130718041-684jr4ij0j19kp7onks2mgj9h03qouhl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.forumkeadilan.newsapp",
+            "certificate_hash": "de67004e81ea171ac03387aef76cf109b0b796b7"
+          }
+        },
+        {
+          "client_id": "132130718041-kqhg87elua79tf6sv8eeakr31cderp51.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.forumkeadilan.newsapp",
+            "certificate_hash": "828b622528bd565bbc03c00d8b3406031e805e20"
+          }
+        },
+        {
+          "client_id": "132130718041-5hi4sd780mj10fjousmahb7u7d5bgnsc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLMYB-rk5LQZTCyaZwEfhVEDR7PjotB48"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "132130718041-5hi4sd780mj10fjousmahb7u7d5bgnsc.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "132130718041-tk3vl250ojk17pqv2l02osf8q0infotv.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.forumkeadilan.fk-ios-user"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:132130718041:android:c8a6595281704c6892cc48",
+        "android_client_info": {
+          "package_name": "com.forumkeadilan.newsapp.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "132130718041-1dn9ogevpeo0j7muik88j1d9rc1dgboc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.forumkeadilan.newsapp.dev",
+            "certificate_hash": "5641c417ac3b7367eea8a43c155b111e8273a4a8"
+          }
+        },
+        {
+          "client_id": "132130718041-9d1ot9ml4f826448qdtok70sc3slojgj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.forumkeadilan.newsapp.dev",
+            "certificate_hash": "565f15a816932eb3fd2890a315eca30419c096ac"
+          }
+        },
+        {
+          "client_id": "132130718041-cr6l29qnbc4ec3mfejnktaaaj8qg1ba0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.forumkeadilan.newsapp.dev",
+            "certificate_hash": "d6d024a7e27dd3d50e3229952a1285c43f61a97e"
+          }
+        },
+        {
+          "client_id": "132130718041-pu2sehe4kon37d9msjkga44jlseein4l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.forumkeadilan.newsapp.dev",
+            "certificate_hash": "dd31a30dba0ae6cc08811389b317922762b8fe53"
+          }
+        },
+        {
+          "client_id": "132130718041-5hi4sd780mj10fjousmahb7u7d5bgnsc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLMYB-rk5LQZTCyaZwEfhVEDR7PjotB48"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "132130718041-5hi4sd780mj10fjousmahb7u7d5bgnsc.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "132130718041-tk3vl250ojk17pqv2l02osf8q0infotv.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.forumkeadilan.fk-ios-user"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:132130718041:android:1fb854a31f68b9b192cc48",
+        "android_client_info": {
+          "package_name": "com.forumkeadilanapps"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "132130718041-5hi4sd780mj10fjousmahb7u7d5bgnsc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLMYB-rk5LQZTCyaZwEfhVEDR7PjotB48"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "132130718041-5hi4sd780mj10fjousmahb7u7d5bgnsc.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "132130718041-tk3vl250ojk17pqv2l02osf8q0infotv.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.forumkeadilan.fk-ios-user"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

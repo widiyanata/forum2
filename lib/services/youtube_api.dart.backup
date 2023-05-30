@@ -1,0 +1,58 @@
+import 'dart:io';
+
+import 'package:http/http.dart' as http;
+import 'package:http/http.dart';
+import 'package:wordpress_app/models/youtube_channel/video_model.dart';
+
+import '../config/wp_config.dart';
+import '../models/youtube_channel/channel_forum.dart';
+import '../utils/keys.dart';
+
+class API_Services {
+  static const Channel_ID = 'UC80mzf_mrz7-dcSK7rLbzQQ';
+
+  static Future<Channel> getChannel() async {
+    Map<String, String> parameters = {
+      'part': 'snippet, contentDetails, statistics',
+      'id': Channel_ID,
+      'key': API_KEY,
+    };
+    Map<String, String> headers = {
+      HttpHeaders.contentTypeHeader: 'application/json',
+    };
+    Uri uri = Uri.https(
+      WpConfig.youtubechannel,
+      '/youtube/v3/channels',
+      parameters,
+    );
+    Response response = await http.get(uri, headers: headers);
+    print(response.body);
+
+    Channel channel = channelFromJson(response.body);
+    return channel;
+  }
+
+  static Future<Videolist> getVideosList(
+      {required String playListId, required String pageToken}) async {
+    Map<String, String> parameters = {
+      'part': 'snippet',
+      'playlistId': playListId,
+      'maxResults': '8',
+      'pageToken': pageToken,
+      'key': API_KEY,
+    };
+    Map<String, String> headers = {
+      HttpHeaders.contentTypeHeader: 'application/json',
+    };
+    Uri uri = Uri.https(
+      WpConfig.youtubechannel,
+      '/youtube/v3/playlistItems',
+      parameters,
+    );
+    Response response = await http.get(uri, headers: headers);
+    print(response.body);
+
+    Videolist videolist = videolistFromJson(response.body);
+    return videolist;
+  }
+}

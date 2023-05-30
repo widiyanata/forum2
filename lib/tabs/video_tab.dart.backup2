@@ -1,0 +1,106 @@
+import 'dart:convert';
+import 'dart:ffi';
+import 'dart:io';
+import 'package:cached_network_image/cached_network_image.dart';
+import 'package:flutter/material.dart';
+import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_icons/flutter_icons.dart';
+import 'package:wordpress_app/config/config.dart';
+import 'package:wordpress_app/config/wp_config.dart';
+import 'package:wordpress_app/models/article.dart';
+import 'package:http/http.dart' as http;
+import 'package:wordpress_app/cards/card3.dart';
+import 'package:wordpress_app/models/youtube_channel/channel_forum.dart';
+import 'package:wordpress_app/models/youtube_channel/video_model.dart';
+import 'package:wordpress_app/services/youtube_api.dart';
+import 'package:wordpress_app/utils/empty_image.dart';
+import 'package:wordpress_app/utils/loading_card.dart';
+import 'package:wordpress_app/widgets/loading_indicator_widget.dart';
+
+class VideoTab extends StatefulWidget {
+  VideoTab({Key? key}) : super(key: key);
+
+  @override
+  _VideoTabState createState() => _VideoTabState();
+}
+
+class _VideoTabState extends State<VideoTab> {
+  Channel? _channel;
+  Videolist? _videolist;
+  Item? _item;
+  bool? _loading;
+  String? _playListId;
+  String? _nextPageToken;
+
+  @override
+  void initState() {
+    super.initState();
+    _loading = true;
+    _nextPageToken = '';
+    getchannel();
+    _loadvideos();
+  }
+
+  getchannel() async {
+    _channel = await API_Services.getChannel();
+    _item = _channel!.items[0];
+    _playListId = _item!.contentDetails.relatedPlaylists.uploads;
+    await _loadvideos();
+    setState(() {
+      _loading = false;
+    });
+  }
+
+  _loadvideos() async {
+    Videolist tempVideosList = await API_Services.getVideosList(
+      playListId: _playListId!,
+      pageToken: _nextPageToken!,
+    );
+    _nextPageToken = tempVideosList.nextPageToken;
+    _videolist!.videos.addAll(tempVideosList.videos);
+    print('videos: ${_videolist!.videos.length}');
+    setState(() {});
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Youtube'),
+      ),
+      body: Container(
+        color: Colors.white,
+        child: Column(children: [_buildinfoview()]),
+      ),
+    );
+  }
+
+  _buildinfoview() {
+    return _loading!
+        ? CircularProgressIndicator()
+        : Container(
+            child: Card(
+              child: Row(
+                children: [
+                  CircleAvatar(
+                    backgroundImage: CachedNetworkImageProvider(
+                      _item!.snippet.thumbnails.medium.url,
+                    ),
+                  ),
+                  SizedBox(width: 20),
+                  Text(
+                    _item!.snippet.title,
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w400,
+                    ),
+                  ),
+                  Text(_item!.statistics.videoCount),
+                  SizedBox(width: 20),
+                ],
+              ),
+            ),
+          );
+  }
+}
