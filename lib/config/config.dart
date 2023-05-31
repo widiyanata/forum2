@@ -4,7 +4,7 @@ class Config {
   static const appName = 'ForumKeadilan';
   static const supportEmail = 'pastibisa7913@gmail.com';
   static const privacyPolicyUrl = 'https://www.mrb-lab.com/privacy-policy';
-  static const iOSAppID = '000000';
+  static const iOSAppID = '6449733441';
 
   //SOCIAL LINKS
   static const String facebookPageUrl =
